@@ -1,12 +1,16 @@
 # Çalışma ortamı · başlangıç doğrulaması
 
 Runtime-mode: NATIVE_SUBAGENTS
-Repo-root: /workspace/scratch/3d8b50a3f795/TUS
+Repo-root: /workspace/scratch/6be1bd604873/TUS-repo
 Repo-branch: main
-Observed-on: 2026-09-09T22:54:26Z
+Observed-on: 2026-09-10T15:13:15Z
 Max-in-flight-tasks: 2
 Max-parallel-subagents: 2
 Shared-worktree-writers: 1
+
+## Güncel okuma notu
+
+Aşağıdaki başlangıç ve prototip bölümleri tarihsel gözlemdir; boş repo, push engeli ve ürün manifesti yokluğu bugünün durumu değildir. Güncel yetki ve erişim en sondaki TUS-011 kabulü bölümündedir. Repo main doludur; package.json test hedefi vardır; kapsam içi repo push kullanıcı tarafından yetkilendirilmiş ve 4c251e5 gönderimi doğrulanmıştır. İzole git worktree bu oturumda gerçekten kullanılmıştır.
 
 ## Repo ve erişim
 
@@ -73,4 +77,8 @@ GitHub size=0 ve default main metadata'sı bu tur doğrulandı. Shell ağ erişi
 
 ## TUS-011 kabulü ve uygulama başlangıcı · 2026-09-10
 
-Repo-root: /workspace/scratch/6be1bd604873/TUS-repo. Remote main32804e3; yerel içe aktarım7a069df; treefe7d004 eşleşti. Shell GitHub erişimi çalışmadığından bağlı uygulama ile 80 dosya okundu, her blob doğrulandı. Kullanıcı senaryoyu repoya eklemeyi ve işe başlamayı yetkilendirdi; tıbbi onay/host deploy yetkisi yok. Eski çalışma dizini kayıtları tarihsel. node --test tests/prototype/*.test.cjs:30 PASS; python3 -m unittest discover -s tests/astra -p 'test_*.py' -v:29 PASS. Fiziksel Android NOT_RUN.
+Repo-root: /workspace/scratch/6be1bd604873/TUS-repo. Remote main32804e3; yerel içe aktarım7a069df; treefe7d004 eşleşti. İlk shell git ls-remote çağrısı gecikmeli döndüğü için bağlı uygulama ile 80 dosya okundu, her blob doğrulandı. Sonradan ls-remote ve git fetch origin main başarıyla tamamlandı; yerel main remote4c251e5 üstüne hizalandı, içe aktarım geçmişi local-import-history dalında korundu. Kullanıcı senaryoyu repoya eklemeyi ve işe başlamayı yetkilendirdi; tıbbi onay/host deploy yetkisi yok. Eski çalışma dizini kayıtları tarihsel. node --test tests/prototype/*.test.cjs:30 PASS; python3 -m unittest discover -s tests/astra -p 'test_*.py' -v:29 PASS. Fiziksel Android NOT_RUN.
+
+## İlk session-core dilimi · 2026-09-10T15:30:04+00:00
+
+İzole git worktree gerçekten kullanıldı: agent/tus-005-session-core, base f31563c. Yalnız üç yeni dosya hash doğrulamasıyla ana ağaca alındı. Worker ve ayrı reviewer tamamlandı; etkin worker yok. Root entegrasyon doğrulaması: node --test tests/prototype/*.test.cjs43 PASS, Astra unittest29 PASS, yeni modül node --check PASS. Loglar runs/TUS-005-* içinde. Worker npm çağrısı ortam ağ onayı iptaliyle başlamadı; doğrudan Node aynı manifest globuyla başarılı oldu. Root dependency kurmadı. Browser, fiziksel Android, IDB transaction ve gerçek restore NOT_RUN; ürün UI bağlantısı ve hosting deployment yapılmadı.
