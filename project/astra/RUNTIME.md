@@ -82,3 +82,7 @@ Repo-root: /workspace/scratch/6be1bd604873/TUS-repo. Remote main32804e3; yerel i
 ## İlk session-core dilimi · 2026-09-10T15:30:04+00:00
 
 İzole git worktree gerçekten kullanıldı: agent/tus-005-session-core, base f31563c. Yalnız üç yeni dosya hash doğrulamasıyla ana ağaca alındı. Worker ve ayrı reviewer tamamlandı; etkin worker yok. Root entegrasyon doğrulaması: node --test tests/prototype/*.test.cjs43 PASS, Astra unittest29 PASS, yeni modül node --check PASS. Loglar runs/TUS-005-* içinde. Worker npm çağrısı ortam ağ onayı iptaliyle başlamadı; doğrudan Node aynı manifest globuyla başarılı oldu. Root dependency kurmadı. Browser, fiziksel Android, IDB transaction ve gerçek restore NOT_RUN; ürün UI bağlantısı ve hosting deployment yapılmadı.
+
+## Kalıcılık/preview devamı · 2026-09-10T17:35:01+00:00
+
+Remote kod03d396602f45d43f5b5d8a75371b5471f3d02f5f; CI34508758242 SUCCESS. Yerel Chromium v1234 indirme timeout/502, CloudBrowser nav transportclosed; yerel Browser testiNOT_RUN. GitHub standard ubuntu Chromium153.0.8010.12/Playwright1.63.0 gerçekCI44+8+5+8PASS; fizikselAndroidNOT_RUN. npm registry'den test bağımlılıkları alındı ve package-lock sabitlendi; app runtime dışdep almaz. Workerlar tamamlandı. local main remote kod ağacıyla hizalı; son devir commitSHA'sını ref'ten doğrula. Hostingdeployment yok.

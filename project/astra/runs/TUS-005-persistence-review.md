@@ -28,3 +28,7 @@ Başarısız evaluate sırasında feedback yok, retry sonrası tek değerlendirm
 Yerel Chromium resmiindirme timeout/502 ile başarısız; browser executable yok. Cloud Browser seçimi başarılı olsa da ilk navigation transport closed oldu. Yerel gerçek tarayıcı testleriNOT_RUN;5 IDB +8 UI testi GitHub Actions sonucunu bekliyor. Workflow yalnızstandardpublicUbuntu testidir; deploy/secret/cache/artifactupload yok.
 
 Tam005 görevi kapanmaz: FSRS, kontrol uygunluğu,0.1 import/geri dönüş, tam üretim öğrenme oturumu açık. TUS003 insan içerik ve TUS007/010 gerçek cihaz/restore kapıları sürer. Dosya demosu yalnız geçici ekran denemesidir.
+
+## Sonraki doğrulama
+
+Kaynak incelemesinden sonra CI https://github.com/akcanburak202-del/TUS/actions/runs/34508758242 kod03d396602f45d43f5b5d8a75371b5471f3d02f5f için tamamlandı:44 Node,8 emulated,5 gerçekIDB+8 UI PASS. Local NOT_RUN kaydı tarihsel olarak kalır; gerçek browser kapısı CI ile bu dar dilimde geçildi. FizikselAndroid/offlineupdate/gerçekquota kapıları geçilmiş sayılmaz.

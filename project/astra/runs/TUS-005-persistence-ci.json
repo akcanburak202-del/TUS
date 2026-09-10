@@ -1,0 +1,19 @@
+{
+  "head_sha": "03d396602f45d43f5b5d8a75371b5471f3d02f5f",
+  "run_id": 34508758242,
+  "job_id": 102977338874,
+  "url": "https://github.com/akcanburak202-del/TUS/actions/runs/34508758242",
+  "conclusion": "success",
+  "runner": "GitHub standard ubuntu-latest",
+  "node": "24",
+  "playwright": "1.63.0",
+  "chromium": "153.0.8010.12",
+  "node_tests": 44,
+  "emulated_tests": 8,
+  "real_idb_browser_tests": 5,
+  "ui_browser_checks": 8,
+  "portable_html_sha256": "450deedb274e43904cddc7293581cdf4a272171bc8c1ad66847b86092b66b4e7",
+  "physical_android": "NOT_RUN",
+  "actual_power_loss_and_physical_quota": "NOT_RUN",
+  "offline_install_update_rollback": "NOT_RUN"
+}

@@ -1,33 +1,29 @@
 # Astra · Devam noktası
 
-Güncellendi: 2026-09-10. Kullanıcı TUS-011 senaryosunu kabul edip repoya eklemeyi ve geliştirmeye başlamayı istedi.
+Güncellendi: 2026-09-10T17:35:01+00:00
 
 ## Geçerli sözleşme
 
-Android tablet ilk, Mac sonra. docs/TUS_Ogrenme_Deneyimi_Revizyon_Plani_v2.md, ADR-003, ADR-004 ve docs/design/ONE_TARGET_LEARNING_SCENARIO.md geçerli. Açık durumun tek kaynağı BACKLOG.md. Genel planı baştan yazma.
+Android tablet ilk, Mac sonra. Güncel plan docs/TUS_Ogrenme_Deneyimi_Revizyon_Plani_v2.md; ADR003/004/005 ve docs/design/ONE_TARGET_LEARNING_SCENARIO.md. Açık iş durumu BACKLOG.md. Genel planı yeniden yazma.
 
-## Son güvenilir nokta
+## Son güvenilir sürüm
 
-Remote main senaryo entegrasyonu 4c251e56a558a6f38c36bb367eb19efd387399fb doğrulandı. Bu kaydı içeren sonraki gönderimin kesin SHA'sı GitHub main ref'inden okunmalı; kendi commit kimliğini dosyanın içine varsayma. Yerel gerçek repo /workspace/scratch/6be1bd604873/TUS-repo, main. Başlangıç import geçmişi local-import-history dalında korunur; remote ile karıştırma.
+Remote main kod+demo commit'i 03d396602f45d43f5b5d8a75371b5471f3d02f5f; tree2f00f17c6b62aa6ca0d60fe47c9dc55155e336b1 doğrulandı. Bu kaydı içeren sonraki commit yalnız devir/kanıt belgesidir; kesin yeni mainSHA'yı API'den oku. Repo /workspace/scratch/6be1bd604873/TUS-repo, main. Yerel çalışmalar local-import-history, local-session-core-history ve local-persistence-history dallarında korunur.
 
-## Yapılan
+## Yapılan ve denenebilir çıktı
 
-TUS-011 kullanıcı tasarım kabulüyle; TUS-012 ve TUS-004 ayrı tasarım incelemesiyle kapandı. Android teslim kararı HTTPS PWA; hosting henüz etkin değil. TUS-005'in ilk saf çekirdeği prototype/session-core.js: sürümlü köken, ilk yanıt kilidi, ayrı güven/değerlendirme, zamanlı yardım, pause/resume, hedef itirazı, tekrar kimliği/revizyon ve geçersiz geçmiş reddi. UI bağlantısı yok; mevcut0.1 core/app/sw ve kullanıcı depolaması değişmedi.
+TUS005: ilk yanıt/güven/değerlendirme/yardım/itiraz çekirdeği, end_session ve gerçek IndexedDB adaptörü var. Workspace olayları ve oturum adımı tek transaction; başarı complete sonrası. Aynı komut etkisiz tekrar, stale revision/bozuk geçmiş reddi. prototype/preview/ yalnız sentetik, tıbbi olmayan ekran denemesi; eski0.1 app/core/sw/localStorage değişmedi.
 
-13 yeni test dahil43 Node testi ve29 Astra testi PASS. Ayrı R2 incelemesi hedef hashlerde engel bulmadı. Tam kanıt runs/TUS-005-session-core-review.md ve ilişkili loglarda. Otomatik test öğrenme yararı veya gerçek cihaz kanıtı değildir.
+release/learning-preview/TUS-Ogrenme-Akisi-Deneme.html kullanıcıya verilecek geçici tek dosya; bütün kayıtları bellekte, sayfa kapanınca silinir. HTTPS ZIP kalıcı IDB sürümünü içerir ama hosting etkin değil. Demo içerikleri ısı denetleyicisi, tiroid sorusu sentetik diye etiketlenmedi. Tiroid senaryosu tasarım/kaynak belgesinde; tıbbi onay bekler.
+
+CI https://github.com/akcanburak202-del/TUS/actions/runs/34508758242 kod03d396602f45d43f5b5d8a75371b5471f3d02f5f için SUCCESS:44 Node,8 Linkedom/fakeIDB benzetimi,5 gerçek ChromiumIDB testi ve8 UI kontrolü. HTMLSHA yerel veCI eşleşti. Bağımsız R2 incelemesi ve manifest runs/TUS-005-persistence-review.md / persistence-manifest.json içinde; CI sonucu persistence-ci.json. Yerel browser kurulumu başarısızdı, CI bunu gerçek Chromium'da telafi etti. Fiziksel Android, gerçek güç kaybı/quota ve offline install/update/rollback NOT_RUN.
 
 ## Kaldığımız iş
 
-TUS-005 ready; tamamlanmış sayma. İlk sonraki dilim: saf çekirdeğin etrafında IndexedDB olay+oturum atomik kalıcılığı ve reload/abort/quota sözleşmesi. Kartta tam session yönlendirme/bitiş, FSRS sürüm/adaptörü, bağımsız kontrol uygunluğu ve0.1 import/geri alma açık. docs/design/SESSION_CORE_CONTRACT.md API sınırı; LEGACY_IMPORT_CONTRACT.md henüz uygulanmamış göç sözleşmesi.
+TUS005 ready ve açık: sürümlü FSRS zamanlayıcı uyarlayıcısı, kontrol uygunluğu (aile/maruziyet/gecikme),0.1 import/geri alma ve tam üretim oturum yönlendirmesi. Sonraki teknik dilim: 0.1 yedeğini değiştirmeden içe alan adaptör ve geri dönüş; docs/design/LEGACY_IMPORT_CONTRACT.md kaynak sözleşme. Sahte tarih/ustalık üretme. TUS007/010 gerçek restore/cihaz kapıları korunur.
 
-TUS-003 insan tıbbi içerik ve kontrol aile kabulü beklediğinden blocked; mevcut kontrol içeriği kullanıcı tarafından görüldü, görülmemiş kontrol sayılamaz. TUS-007 restore/çökme ve TUS-010 gerçek Android kapıları açık.
+TUS003 blocked: insan tıbbi içerik incelemesi ve görülmemiş kontrol aile kabulü yok. Kullanıcı mevcutC1'i gördü; bağımsız görülmemiş kontrol diye kullanma. TUS006 queued; sentetik harness onu tamamlamaz.
 
-## Aktif sahiplik ve yetki
+## Sahiplik ve yetki
 
-Bu dilimin worker/reviewer'ları tamamlandı; arka planda devam eden uygulama işi yok. /root/session_core_impl izole TUS-core-worktree içinde yalnız üç izinli dosya yazdı; /root/session_core_review taze bağımsız bağlamda inceledi. Ana kayıtların tek yazıcısı /root. İstenen gpt-5.6-sol/high; etkin metadata unknown. Yeni turda gerçek durumu doğrula.
-
-Senaryo ve kapsam içi geliştirme commit/gönderimi açıkça yetkili. Yeni ücret, hosting deployment ve insan tıbbi onayı yok. Teknik iş sentetik fixture ile ilerler; tıbbi öğrenci bankasını etkinleştirme.
-
-## Yeni yürütme · 2026-09-10
-
-Kullanıcı kaldığımız yerden devamı ve denenebilir aşamaya ilerlemeyi istedi. Remote main9582bfd doğrulandı, temiz baseline. /root/idb_impl: TUS-idb-worktree, session-store ve dar end_session uzantısı + test/sözleşme. /root/preview_impl: TUS-preview-worktree, yalnız prototype/preview/ ve browser testi. Ortak API store.open({catalog,dbName}) -> load(workspaceId), dispatch(workspaceId,commands), close. Ayrı izole yazıcılar, ortak şema değişikliğinin tek sahibi idb_impl; root yönetim ve paketleme. TUS005 aktif; sentetik teknik harness TUS006 kabulü değildir. Model tercihleri sol/high; effective unknown.
+/root/idb_impl, /root/preview_impl ve /root/persistence_review tamamlandı; arka planda çalışan ajan yok. İstenen sol/high, effective unknown. Root entegrasyon ve kabulü yaptı. Bu devam isteği kapsam içi geliştirme ve repo gönderim yetkisini sürdürüyor. Yeni hosting deployment, ücret veya insan tıbbi onayı verilmiş sayılmadı. Standard public GitHub test workflow'u read-only yetkiyle çalıştı; yayın değildir.
