@@ -1,7 +1,7 @@
-TUS reposunda kaldığımız yerden devam edelim: https://github.com/akcanburak202-del/TUS
+TUS reposunda kayıtlı yerden devam et: https://github.com/akcanburak202-del/TUS
 
-Önce ASTRA_ORCHESTRATOR.md, skills/tus-astra-orchestrator/SKILL.md, project/astra/STATE.md, BACKLOG.md ve RUNTIME.md dosyalarını oku. Ardından docs/TUS_Ogrenme_Deneyimi_Revizyon_Plani_v2.md ve project/astra/decisions/ADR-003-revision-v2.md kararını esas al. Gerçek depo durumunu ve son commit'i doğrula.
+Önce ASTRA_ORCHESTRATOR.md, skills/tus-astra-orchestrator/SKILL.md ve project/astra/STATE.md, BACKLOG.md, RUNTIME.md oku. Güncel kaynak docs/TUS_Ogrenme_Deneyimi_Revizyon_Plani_v2.md, ADR-003 ve docs/design/ONE_TARGET_LEARNING_SCENARIO.md.
 
-İlk somut iş TUS-011: tiroid ekseninden tek bir öğrenme hedefinin kaynaklı soru/yanıt/öğretim senaryosunu hazırla. Bilmiyorum, yanlış, doğru ama tahmin ve anahtar itirazı yollarını; her ekrandaki kısa metni ve sonraki eylemi somutlaştır. Teslimi docs/design/ONE_TARGET_LEARNING_SCENARIO.md dosyasına yaz. Önce senaryoyu değerlendireceğiz; bu adımda uygulama koduna başlama veya genel revizyon planını tekrar yazma.
+TUS-011 kullanıcı tasarım kabulüyle tamamlandı; senaryoyu baştan yazma. BACKLOG'daki gerçek ilk hazır/aktif işten devam et. Android tablet ilk, Mac sonra. Ürün koduna izin var; insan tıbbi onayı, barındırma ve yeni ücret yetkisini kendiliğinden üretme. TUS-003 açık kaldığı sürece tıbbi görevleri öğrenci bankasında etkinleştirme; teknik işi sentetik fixture ile sürdürebilirsin. Kullanıcının kontrol içeriğini gördüğünü koru.
 
-Android tablet ilk hedef; Mac sonra. Hazır içerikle başlayan sade bir çalışma deneyimi istiyorum. Bilimsel bulguyu, tasarım kararını ve test edilecek hipotezi ayrı tut. Tıbbi içeriği insan onayı olmadan yayımlama. Astra orkestratör olsun; uygun işleri varsayılan GPT-5.6 Sol/high alt ajanlara devretsin. Tamamlanmamış işleri backlogda, doğrulanmış kapanışları CLOSED ve kabul kayıtlarında tut. Yeni ücret/barındırma yetkisi varsayma.
+Alt ajanlar varsayılan gpt-5.6-sol/high; en çok2, ortak alanda1 yazıcı. Kararlar/kabul Astra'da. Tamamlanmamış işleri BACKLOG'da, kanıtlı kapanışı CLOSED/closures'da tut. Remote main ve son commit'i doğrula; yerel snapshot ile remote SHA'yı karıştırma.

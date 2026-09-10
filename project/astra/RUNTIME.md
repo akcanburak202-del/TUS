@@ -69,3 +69,8 @@ Kullanıcı Android tablette denenebilir prototip istedi ve yokluğunda gelişti
 Kullanıcı herkese açık repo uyarısını gördükten sonra “bu revizyonu repoya entegre et” ve yeni sohbet devir kayıtlarını güncelle talimatı verdi. Bu hedefte mevcut plan/iskelet/prototip ve revizyonun commit/gönderimi yetkilendirildi. Önceki BLOCKED_BY_AUTO_REVIEW kaydı tarihsel olarak korunur; yeni talep olmadan yok sayılmadı. Bu tur ürün kodu geliştirme görevi yeni sohbete bırakıldı. Yeni ücret/barındırma/public app deployment yetkisi yok.
 
 GitHub size=0 ve default main metadata'sı bu tur doğrulandı. Shell ağ erişimi GitHub'a ayrıca kısıtlı olabilir; bağlı GitHub uygulaması kullanılabilir. Gerçek gönderim sonucunu remote ref/commit ile doğrula, yerel commit'i uzaktaki commit diye sunma.
+
+
+## TUS-011 kabulü ve uygulama başlangıcı · 2026-09-10
+
+Repo-root: /workspace/scratch/6be1bd604873/TUS-repo. Remote main32804e3; yerel içe aktarım7a069df; treefe7d004 eşleşti. Shell GitHub erişimi çalışmadığından bağlı uygulama ile 80 dosya okundu, her blob doğrulandı. Kullanıcı senaryoyu repoya eklemeyi ve işe başlamayı yetkilendirdi; tıbbi onay/host deploy yetkisi yok. Eski çalışma dizini kayıtları tarihsel. node --test tests/prototype/*.test.cjs:30 PASS; python3 -m unittest discover -s tests/astra -p 'test_*.py' -v:29 PASS. Fiziksel Android NOT_RUN.
