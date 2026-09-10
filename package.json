@@ -1,0 +1,1 @@
+{"name":"tus-local-prototype","private":true,"version":"0.1.0","scripts":{"test":"node --test tests/prototype/*.test.cjs","build":"python3 tools/prototype/build.py","check":"node --check prototype/core.js && node --check prototype/app.js && node --check prototype/sw.js"}}

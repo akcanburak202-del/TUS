@@ -1,0 +1,19 @@
+{
+  "imported_on": "2026-09-10",
+  "files": [
+    {
+      "original_name": "TUS_Yerel_Uygulama_Proje_Plani.md",
+      "bundled_path": "docs/input/TUS_Yerel_Uygulama_Proje_Plani.md",
+      "sha256": "1fc8604ac98c07932354d019f065ab6a3edaa69df9997e45220fb0a4fb5b02f5",
+      "origin": "conversation attachment",
+      "status": "user-provided baseline; not revalidated research"
+    },
+    {
+      "original_name": "TUS_Yerel_Uygulama_Arastirma_ve_Planlama_Promptu(1).md",
+      "bundled_path": "docs/input/TUS_Yerel_Uygulama_Arastirma_ve_Planlama_Promptu.md",
+      "sha256": "5007cc039dc2b4addb9e4bcc3f97e87a5e977bf8172103d90c2f9c4d869adcd6",
+      "origin": "conversation attachment",
+      "status": "user-provided baseline; not revalidated research"
+    }
+  ]
+}

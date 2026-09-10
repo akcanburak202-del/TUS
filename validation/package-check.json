@@ -1,0 +1,41 @@
+{
+  "result": "PASS",
+  "scope": "package_and_workflow_structure_only",
+  "python": "3.13.5",
+  "platform": "Linux",
+  "skill_frontmatter_checked": true,
+  "skill_line_count": 125,
+  "skill_words_whitespace": 1613,
+  "skill_reference_links_checked": 6,
+  "source_snapshots_byte_identical": 2,
+  "unit_tests_passed": 29,
+  "unit_tests_skipped": 0,
+  "product_tasks_completed": 0,
+  "actual_multiagent_evaluations_run": 0,
+  "commands": [
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "tools/astra/check_workflow.py",
+        "--root",
+        ".",
+        "--json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/astra",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

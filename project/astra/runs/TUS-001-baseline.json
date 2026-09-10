@@ -1,0 +1,20 @@
+{
+  "docs/input/SOURCE_MANIFEST.json": "281660e59d3a2a1ab461e73d503c8e4a65a5a09a28d0c19e0529879bfb8bfe25",
+  "docs/input/TUS_Yerel_Uygulama_Arastirma_ve_Planlama_Promptu.md": "5007cc039dc2b4addb9e4bcc3f97e87a5e977bf8172103d90c2f9c4d869adcd6",
+  "docs/input/TUS_Yerel_Uygulama_Proje_Plani.md": "1fc8604ac98c07932354d019f065ab6a3edaa69df9997e45220fb0a4fb5b02f5",
+  "skills/tus-astra-orchestrator/SKILL.md": "f5287d3185555d620f4d77db110308fd8999d47046db449d42ace0b19e7b88ee",
+  "skills/tus-astra-orchestrator/references/DESIGN_RATIONALE.md": "3ec569a9071b682df2eda7062e4034e653ab705258962cb3a944a55302d8dfea",
+  "skills/tus-astra-orchestrator/references/OPERATING_PROTOCOL.md": "63439e57390388ceecf635f156b7c4dac3ae9b799cd1db359ed3f62ba5bcfca9",
+  "skills/tus-astra-orchestrator/references/QUALITY_AND_EVALS.md": "e673ae798c2228734cb85285dd1f060346a0b0af083b307ce93820f9e2f61099",
+  "skills/tus-astra-orchestrator/references/RESEARCH_PROTOCOL.md": "8c4ab68dbb2f7ebac409aafa10e64c45d8a106c01f0c336853855d9af0563f63",
+  "skills/tus-astra-orchestrator/references/RUNTIME_ADAPTERS.md": "0bda69ff99ff5b66df0b5306b5eb17730e3a1c0dccc559660a2c2a000b2cfe46",
+  "skills/tus-astra-orchestrator/references/TUS_GUARDRAILS.md": "419c33fa5d5778cd4f3ff89f29fb3104645c252bb887de40660ba483790c4762",
+  "skills/tus-astra-orchestrator/templates/CLOSURE.md": "64afca3179d18b73cc775272127b3db28451961bf6e5e738bd1c56b39bdc703d",
+  "skills/tus-astra-orchestrator/templates/DECISION.md": "02dc964df348cee9815ad29684dd92c514e1028eef3f42162bd28e3d4135e98c",
+  "skills/tus-astra-orchestrator/templates/DELEGATION.md": "9df5c2b6beaf696212dbf872b4a023c1b2e14111168534c5003a51e0ed23fc1a",
+  "skills/tus-astra-orchestrator/templates/RESEARCH.md": "e56d9c1bb52026092a1b4f4cfd411dfe0d32fa62af1fdf7c6a5c0aaa2f57e65c",
+  "skills/tus-astra-orchestrator/templates/REVIEW.md": "279c55dd19cc796e6b707dec893cf34172cdf41147ea1a60476e51d75ae84d11",
+  "skills/tus-astra-orchestrator/templates/TASK.md": "9f45599a7f7383079f9f3a7bcd53f22a26b3f3017649570bcdec2e3f7470d91c",
+  "tools/astra/check_workflow.py": "f903c9bf49db792228529d57c51dd9aec1d5bd3a5314bf7f2731b931a4448f5c",
+  "tests/astra/test_workflow.py": "d7338b9b0613fe4b2e376262b91790be5cd24c371d3b338506c7f45435740ae1"
+}

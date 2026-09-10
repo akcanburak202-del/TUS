@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123b54"><meta name="description" content="TUS için cihazında çalışan öğrenme prototipi"><title>TUS Yerel · Çalışma masası</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a href="#today" class="brand" aria-label="TUS Yerel ana sayfa"><span class="monogram">T</span><span>TUS <b>Yerel</b><small>ANDROID PROTOTİPİ · 0.1</small></span></a><span id="storage-status" class="status">Cihazda saklanır</span></header>
+<div id="notice" role="status" aria-live="polite" hidden></div>
+<div class="shell"><aside><nav aria-label="Ana gezinme"><button data-view="today" class="nav active">Çalışma masası</button><button data-view="library" class="nav">Hedeflerim</button><button data-view="records" class="nav">Çalışma kayıtları</button><button data-view="backup" class="nav">Yedek ve kurulum</button></nav><div class="side-note"><b>Küçük bir çalışma döngüsü</b><p>Hatırla, yanıtını kontrol et, eksik kalan yere dön.</p><p>Öğrenme gözlemleri birbirinden ayrı tutulur.</p></div></aside><main id="main" tabindex="-1"></main></div>
+<dialog id="confirm-dialog"><form method="dialog"><h2 id="confirm-title">Emin misin?</h2><p id="confirm-text"></p><div class="actions"><button value="cancel" class="secondary">Vazgeç</button><button value="ok" class="primary">Onayla</button></div></form></dialog>
+<footer>İlerleme yalnızca bu tarayıcıda. Düzenli olarak yedek indir.</footer>
+<script src="core.js"></script><script src="app.js"></script>
+</body></html>

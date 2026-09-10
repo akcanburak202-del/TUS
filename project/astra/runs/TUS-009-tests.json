@@ -1,0 +1,44 @@
+[
+  {
+    "cwd": "/workspace/scratch/3d8b50a3f795/TUS",
+    "command": [
+      "node",
+      "--test",
+      "tests/prototype/app.test.cjs",
+      "tests/prototype/core.test.cjs"
+    ],
+    "started": "2026-09-09T23:21:26.147203+00:00",
+    "exit_code": 0,
+    "stdout": "✔ fresh app boots with planned tasks and a working answer/reveal/grade path (9.130605ms)\n✔ unknown answer persists separately, and a hint is an exposure before reveal (3.759649ms)\n✔ 0 minutes schedules no tasks and creates no false failure (2.865876ms)\n✔ personal workspace does not borrow demo tasks or events (4.425531ms)\n✔ corrupt stored data remains untouched and surfaces recovery (1.465679ms)\n✔ failed persistence does not reveal an unrecorded answer (2.531575ms)\n✔ personal content is escaped and valid questions can be studied (3.423618ms)\n✔ backup validation rejects catalog mismatch and extra keys without modifying existing state (3.164718ms)\n✔ valid import replaces only after validation, and undo restores prior state (3.163089ms)\n✔ malformed import never alters active or undo snapshots (1.7602ms)\n✔ storage event from another tab stops subsequent writes (2.8872ms)\n✔ cross-tab change is detected before storage event is delivered (2.672017ms)\n✔ unapproved content is not saved even if a submit handler is invoked directly (2.637324ms)\n✔ failed second import preserves undo for the first successful import (2.785508ms)\n✔ backup size validation shares the export/import limit (105.403849ms)\n✔ HTTP writer lock prevents another tab from mutating even during event delay (3.254416ms)\n✔ createState produces a valid fresh state (1.618214ms)\n✔ browser IIFE exposes globalThis.TusCore without CommonJS (1.711312ms)\n✔ addEvent is immutable and an exact duplicate is idempotent (1.022447ms)\n✔ validateState rejects duplicate IDs and malformed backup shapes (0.311855ms)\n✔ task catalogs are bounded and strictly shaped (0.419903ms)\n✔ plan obeys capacity zero and filters control, draft, and suspended tasks (0.455472ms)\n✔ plan is deterministic, bounded, and distinguishes unknown from wrong (0.557111ms)\n✔ successive plans rotate an objective through recall, explain, and discriminate (0.767018ms)\n✔ summary separates wrong, unknown, self reports, observations, and exposures (0.77151ms)\n✔ a first-seen control family can be delayed independent success (0.422998ms)\n✔ hints, shown answers, reused control family, and short delay never count (0.533859ms)\n✔ same-session exposure cannot become independent evidence even after seven days (0.189827ms)\n✔ equal timestamps use append order when evaluating contamination (0.202239ms)\n✔ future events are retained but excluded from an as-of summary and plan (0.149905ms)\nℹ tests 30\nℹ suites 0\nℹ pass 30\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 254.730731\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/workspace/scratch/3d8b50a3f795/TUS",
+    "command": [
+      "python3",
+      "tools/prototype/verify.py"
+    ],
+    "started": "2026-09-09T23:21:26.463053+00:00",
+    "exit_code": 0,
+    "stdout": "PASS: split local assets, manifest icons, service-worker cache list, 3 source scripts and 2 bundled scripts; no standalone external references. Physical Android/browser/offline restart NOT_RUN.\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/workspace/scratch/3d8b50a3f795/TUS",
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/astra",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "started": "2026-09-09T23:21:26.825877+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_absolute_path_rejected (test_workflow.WorkflowTests.test_absolute_path_rejected) ... ok\ntest_acceptance_date_matches_archive (test_workflow.WorkflowTests.test_acceptance_date_matches_archive) ... ok\ntest_bad_header_rejected (test_workflow.WorkflowTests.test_bad_header_rejected) ... ok\ntest_bad_row_rejected (test_workflow.WorkflowTests.test_bad_row_rejected) ... ok\ntest_blank_field_does_not_consume_next_line (test_workflow.WorkflowTests.test_blank_field_does_not_consume_next_line) ... ok\ntest_cancelled_does_not_satisfy_dependency (test_workflow.WorkflowTests.test_cancelled_does_not_satisfy_dependency) ... ok\ntest_cancelled_requires_reason (test_workflow.WorkflowTests.test_cancelled_requires_reason) ... ok\ntest_cli_failure_exit_code_and_json (test_workflow.WorkflowTests.test_cli_failure_exit_code_and_json) ... ok\ntest_dependency_cycle_detected_while_queued (test_workflow.WorkflowTests.test_dependency_cycle_detected_while_queued) ... ok\ntest_done_not_allowed_in_open_backlog (test_workflow.WorkflowTests.test_done_not_allowed_in_open_backlog) ... ok\ntest_duplicate_open_id (test_workflow.WorkflowTests.test_duplicate_open_id) ... ok\ntest_interrupted_closure_open_closed_overlap (test_workflow.WorkflowTests.test_interrupted_closure_open_closed_overlap) ... ok\ntest_invalid_wip_limit (test_workflow.WorkflowTests.test_invalid_wip_limit) ... ok\ntest_missing_acceptance_criterion (test_workflow.WorkflowTests.test_missing_acceptance_criterion) ... ok\ntest_missing_closure_proof (test_workflow.WorkflowTests.test_missing_closure_proof) ... ok\ntest_missing_task_card (test_workflow.WorkflowTests.test_missing_task_card) ... ok\ntest_not_run_cannot_be_done (test_workflow.WorkflowTests.test_not_run_cannot_be_done) ... ok\ntest_orphan_card (test_workflow.WorkflowTests.test_orphan_card) ... ok\ntest_path_traversal_rejected (test_workflow.WorkflowTests.test_path_traversal_rejected) ... ok\ntest_placeholder_target_rejected (test_workflow.WorkflowTests.test_placeholder_target_rejected) ... ok\ntest_r2_self_review_cannot_close (test_workflow.WorkflowTests.test_r2_self_review_cannot_close) ... ok\ntest_read_only_checker_does_not_modify_files (test_workflow.WorkflowTests.test_read_only_checker_does_not_modify_files) ... ok\ntest_ready_requires_completed_dependencies (test_workflow.WorkflowTests.test_ready_requires_completed_dependencies) ... ok\ntest_self_dependency (test_workflow.WorkflowTests.test_self_dependency) ... ok\ntest_symlink_escape_rejected (test_workflow.WorkflowTests.test_symlink_escape_rejected) ... ok\ntest_unknown_dependency (test_workflow.WorkflowTests.test_unknown_dependency) ... ok\ntest_valid_done_enables_dependent_task (test_workflow.WorkflowTests.test_valid_done_enables_dependent_task) ... ok\ntest_valid_queued_backlog (test_workflow.WorkflowTests.test_valid_queued_backlog) ... ok\ntest_wip_limit_includes_review (test_workflow.WorkflowTests.test_wip_limit_includes_review) ... ok\n\n----------------------------------------------------------------------\nRan 29 tests in 0.073s\n\nOK\n"
+  }
+]

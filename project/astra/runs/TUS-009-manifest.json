@@ -1,0 +1,18 @@
+{
+  "package.json": "7613d3ccb243c087360d24ec2cf1e51d9520a037c4829d988676b983bac0383d",
+  "prototype/ANDROID-BASLANGIC.md": "fca6f5c229e076c0e1d16aad15b2f66e626649b711c3c1dff5cd8f3a74ffd5fe",
+  "prototype/app.js": "02e81030f3afc332b53973749a58a984cfed02d4e90b1de6db70d7f304ad35de",
+  "prototype/core.js": "ef264f202812301477a26e2b7f6dc034fa0b5427415f13c262275a57b18313b7",
+  "prototype/icon-192.png": "b029fa4086c3897164230d5691a245dd74a5e6830f57686d09c807aa2048745d",
+  "prototype/icon-512.png": "ed5766700aaddfc3d1f79a207cd436a99d7971e1f10d08cce88ae9602c3321e2",
+  "prototype/icon.svg": "21ca9434b1a3b65095b1506bed9f473b449e9d718784f1dcffd9dcf68cd8c332",
+  "prototype/index.html": "8f411ff7b23525e4dd90375b61f25c972ea31d9f8cf642a13c2422c58682706d",
+  "prototype/manifest.webmanifest": "afaaef3b16a4887ab4991ec367930327ac50150b0c5372e9755e06b0753183c3",
+  "prototype/style.css": "e2e4f58fbc16c8fe2bb868b6f644922a38948f99e899090d7d9be72d0694bea6",
+  "prototype/sw.js": "509a9eb2d2257e7a3ed9ef002176a4c630ec8d2c654228472ffd5771c99da645",
+  "release/TUS-Android-Prototip.html": "a041647abfc65a9241aa26d1074b71509fb0607a9413fa5e85bad68fb1dcbbc3",
+  "tests/prototype/app.test.cjs": "38e03ba0d5522d0d5d9fcd75a2cdd62b704d23909be63a410139afa8a3bcdf08",
+  "tests/prototype/core.test.cjs": "343d04272c12ad343eedc43b9c58056f23e4837d13bd5e79212bcca409e66595",
+  "tools/prototype/build.py": "a7df7d8ea42ae46997af553a0bc8b73311e28b4c388e01e1cce03b99bf7b9f94",
+  "tools/prototype/verify.py": "880d5e30e213f4874b963741d699af5e69b6a5b62ddc4a21fc8f778c39516ec4"
+}
