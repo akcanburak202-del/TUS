@@ -18,3 +18,7 @@ Reviewer: /root/handoff_review; istenen gpt-5.6-sol/high, etkili metadata unknow
 ## Gönderim yöntemi
 
 Shell git push HTTPS kullanıcı kimliği bulunamadığı için başarısız oldu (yetki reddi değil). Kullanıcıca yetkilendirilmiş bağlı GitHub uygulamasıyla kaynak snapshot'ı gönderilir. Remote boş olduğu için contents API başlangıcı ve tam tree/commit kullanılır; yerel tarih SHA'ları remote commit SHA'ları değildir. Sonuç ayrıca remote main tree/ref ile doğrulanır.
+
+## Doğrulanmış sonuç
+
+GitHub main kaynak commit: 91b41ede6540976aa9301f1d2eaed265bbebfd2e. GitHub Git API ref ve commit okumalarıyla doğrulandı. Remote tree ac1e2cf23c51d52334617ce9a9502afe27bbb198, yerel kontrol edilen tree ile birebir aynı: 80 izlenen dosyanın içerikleri ve kipleri eşleşiyor. main fast-forward ile güncellendi. Yerel main remote geçmişine hizalandı; önceki yerel commitler local-history-before-github-import dalında korundu. Bu sonuç kaydı kaynak commitin üzerine ayrı belge commiti olarak eklenir.

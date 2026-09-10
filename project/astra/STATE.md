@@ -32,6 +32,8 @@ TUS-011 hazır. TUS-012 ekran/dağıtım, sonra içerik/veri/tek tam döngü ve 
 
 Depo: https://github.com/akcanburak202-del/TUS . Önceki herkese açık gönderim incelemesi reddi tarihsel kayıttır. Kullanıcı bu uyarıdan sonra bu tur revizyonu repoya entegre etmemizi açıkça istedi; mevcut proje/plan/iskeletin bu repoya gönderimi yetkilendirildi. Yeni ücret, uygulama barındırma veya başka hedefe yayın yetkisi çıkarma. Yeni oturum remote main/head'i ve çalışma ağacını doğrulasın; metadata/git kaydı olmadan push olmuş saymasın.
 
+GitHub entegrasyonu tamamlandı: doğrulanan kaynak commit `91b41ede6540976aa9301f1d2eaed265bbebfd2e`, tree `ac1e2cf23c51d52334617ce9a9502afe27bbb198`. Remote main bu commit üzerinden ilerler; bu başarı kaydı sonraki belge commitinde yer alır. Yerel main remote geçmişine hizalandı; eski yerel tarih local-history-before-github-import dalında korunur.
+
 ## Aktif sahiplikler
 
 Yok. Bu devir, çalışan arka plan ajanı bırakmaz. Önceki çekirdek/araştırma/inceleme ajanlarının hepsi tamamlandı. Son düzenleyici Astra. Yeni oturum yeni gerçek görev sahipliği kaydı oluşturur.
