@@ -1,0 +1,31 @@
+name: Learning preview checks
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'prototype/**'
+      - 'tests/**'
+      - 'tools/preview/**'
+      - 'package*.json'
+      - '.github/workflows/learning-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: learning-preview-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx --no-install playwright install --with-deps chromium --only-shell
+      - run: npm test
+      - run: npm run test:emulated
+      - run: npm run test:browser
+      - run: python3 tools/astra/check_workflow.py --root .

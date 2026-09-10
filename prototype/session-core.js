@@ -14,7 +14,7 @@
   var TASK_STATUS = ["synthetic", "production", "draft", "suspended"];
   var COMMAND_TYPES = [
     "start_session", "open_material", "submit_answer", "declare_confidence", "evaluate_answer",
-    "advance_step", "pause_session", "resume_session", "dispute_answer"
+    "advance_step", "pause_session", "resume_session", "end_session", "dispute_answer"
   ];
 
   function fail(message) { throw new TypeError(message); }
@@ -187,7 +187,7 @@
       common(command, ["answerEventId"]); id(command.answerEventId, "command.answerEventId");
     } else if (command.type === "advance_step") {
       common(command, ["step"]); id(command.step, "command.step");
-    } else if (command.type === "pause_session" || command.type === "resume_session") {
+    } else if (command.type === "pause_session" || command.type === "resume_session" || command.type === "end_session") {
       common(command, []);
     } else if (command.type === "dispute_answer") {
       common(command, ["answerEventId", "scope", "category", "note"]);
@@ -233,7 +233,7 @@
         return;
       }
       if (c.type === "dispute_answer") {
-        if (session.status !== "active" || !attempt.answer || !attempt.evaluation || attempt.dispute || c.answerEventId !== attempt.answer.eventId) {
+        if ((session.status !== "active" && session.status !== "completed") || !attempt.answer || !attempt.evaluation || attempt.dispute || c.answerEventId !== attempt.answer.eventId) {
           fail("invalid dispute transition or answer reference");
         }
         attempt.dispute = { eventId: event.id, at: c.at, answerEventId: c.answerEventId, scope: c.scope, objective: clone(attempt.origin.objective), category: c.category, note: c.note };
@@ -265,6 +265,10 @@
         attempt.evaluation = { eventId: event.id, answerEventId: c.answerEventId, at: c.at, result: result, effectiveResult: result, status: "effective" };
       } else if (c.type === "advance_step") session.currentStep = c.step;
       else if (c.type === "pause_session") session.status = "paused";
+      else if (c.type === "end_session") {
+        if (!attempt.answer || !attempt.evaluation) fail("session can end only after evaluating its current answer");
+        session.status = "completed";
+      }
     });
     return { sessions: sessions, attempts: attempts, blockedObjectives: blockedObjectives };
   }
@@ -331,7 +335,7 @@
       if (command.type === "resume_session") {
         if (session.status !== "paused") fail("only a paused session can resume");
       } else if (command.type === "dispute_answer") {
-        if (session.status !== "active" || !attempt.answer || !attempt.evaluation || attempt.dispute) fail("answer must have one effective evaluation before dispute");
+        if ((session.status !== "active" && session.status !== "completed") || !attempt.answer || !attempt.evaluation || attempt.dispute) fail("answer must have one effective evaluation before dispute");
         if (command.answerEventId !== attempt.answer.eventId) fail("dispute references the wrong first answer");
       } else {
         if (session.status !== "active") fail("session is not active");
@@ -344,6 +348,8 @@
         } else if (command.type === "evaluate_answer") {
           if (!attempt.answer || attempt.evaluation) fail("exactly one unevaluated answer is required");
           if (command.answerEventId !== attempt.answer.eventId) fail("evaluation references the wrong first answer");
+        } else if (command.type === "end_session") {
+          if (!attempt.answer || !attempt.evaluation) fail("session can end only after evaluating its current answer");
         }
       }
     }

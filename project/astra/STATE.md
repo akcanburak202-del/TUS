@@ -27,3 +27,7 @@ TUS-003 insan tıbbi içerik ve kontrol aile kabulü beklediğinden blocked; mev
 Bu dilimin worker/reviewer'ları tamamlandı; arka planda devam eden uygulama işi yok. /root/session_core_impl izole TUS-core-worktree içinde yalnız üç izinli dosya yazdı; /root/session_core_review taze bağımsız bağlamda inceledi. Ana kayıtların tek yazıcısı /root. İstenen gpt-5.6-sol/high; etkin metadata unknown. Yeni turda gerçek durumu doğrula.
 
 Senaryo ve kapsam içi geliştirme commit/gönderimi açıkça yetkili. Yeni ücret, hosting deployment ve insan tıbbi onayı yok. Teknik iş sentetik fixture ile ilerler; tıbbi öğrenci bankasını etkinleştirme.
+
+## Yeni yürütme · 2026-09-10
+
+Kullanıcı kaldığımız yerden devamı ve denenebilir aşamaya ilerlemeyi istedi. Remote main9582bfd doğrulandı, temiz baseline. /root/idb_impl: TUS-idb-worktree, session-store ve dar end_session uzantısı + test/sözleşme. /root/preview_impl: TUS-preview-worktree, yalnız prototype/preview/ ve browser testi. Ortak API store.open({catalog,dbName}) -> load(workspaceId), dispatch(workspaceId,commands), close. Ayrı izole yazıcılar, ortak şema değişikliğinin tek sahibi idb_impl; root yönetim ve paketleme. TUS005 aktif; sentetik teknik harness TUS006 kabulü değildir. Model tercihleri sol/high; effective unknown.

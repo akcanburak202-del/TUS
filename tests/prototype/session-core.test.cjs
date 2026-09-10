@@ -147,6 +147,28 @@ test("pause, JSON reload, and resume preserve the open attempt and step", () => 
   assert.equal(Core.project(state).sessions["session-1"].status, "active");
 });
 
+test("end requires an evaluated answer, completes the session, and permits a later dispute", () => {
+  const cat = catalog();
+  let state = Core.dispatch(Core.createState(), cat, start());
+  assert.throws(() => Core.dispatch(state, cat, command("end_session", 1)), /only after evaluating/);
+  state = Core.dispatchBatch(state, cat, [
+    submit(1), command("evaluate_answer", 2, { answerEventId: "event-1" }), command("end_session", 3)
+  ]);
+  assert.equal(Core.project(state).sessions["session-1"].status, "completed");
+  for (const blocked of [
+    command("open_material", 4, { material: "root" }),
+    submit(4, { kind: "option", selectedOptionKey: "option-b" }, { id: "late-answer" }),
+    command("advance_step", 4, { step: "again" }),
+    command("resume_session", 4),
+    command("end_session", 4)
+  ]) assert.throws(() => Core.dispatch(state, cat, blocked), /session is not active|only a paused session|status transitions/);
+
+  state = Core.dispatch(state, cat, command("dispute_answer", 4, {
+    answerEventId: "event-1", scope: "objective", category: "key", note: "completed answer review"
+  }));
+  assert.equal(Core.project(state).sessions["session-1"].status, "review_pending");
+});
+
 test("objective dispute preserves first answers and neutralizes every same-objective evaluation", () => {
   const cat = catalog();
   let state = Core.dispatchBatch(Core.createState(), cat, [

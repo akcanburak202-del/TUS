@@ -1,0 +1,11 @@
+{
+  "prototype/session-core.js": "9b0006fba290236d124d9af754212a4c89d028fe2ad5d4428749f2878a9b2684",
+  "prototype/session-store.js": "fcee3800fe39c68059ffc31af13a71faef12da041d1c25fd3bf5ad84bf47c539",
+  "prototype/preview/app.js": "67b3fadd6554c51dea6d4e17ce7cb1ac03c639c1ce2f403e522bf3ab39d1a3e0",
+  "prototype/preview/sw.js": "1bcd9913b750b3cdea7c3f1050490281f2df92d2997f99a21ffd4749dff71267",
+  "tests/browser/session-store.spec.cjs": "9a6bf21e1878967f36d3aeece0b21c33f051a980b20e267251a6a570027ac893",
+  "tests/browser/preview.spec.cjs": "f1d0441afff01316b39bca6456435b5528fbb10c0f9e468638da8eff838a1f57",
+  "tests/emulated/preview.test.cjs": "e2492b146f33097f298fe8aa1b9c5b75c742f08d928f4a673ad400f7cec28ff3",
+  "tools/preview/build.py": "2b8e2286c316647fe6db6b5fac3d195b76682cd0bf6431afaf3356f42c45b35a",
+  "package-lock.json": "e76280b1b3627294ed3c0b2b90fa1888e3164123fc59bc02c12d4dd52c1a206e"
+}

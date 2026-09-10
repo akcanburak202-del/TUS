@@ -82,9 +82,10 @@ Aynı `id` ve birebir aynı komut tekrar gelirse, `expectedRevision` artık eski
 | `advance_step` | `step` | Açık session'ın son adımını değiştirir. |
 | `pause_session` | — | Aktif session'ı duraklatır. |
 | `resume_session` | — | Yalnız duraklatılmış session'ı sürdürür. |
+| `end_session` | — | Aktif session'ı yalnız geçerli yanıt değerlendirildikten sonra tamamlar. Tamamlanan session yeniden açılamaz, ilerletilemez veya yanıt alamaz. |
 | `dispute_answer` | `answerEventId`, `scope: "objective"`, `category`, `note` | İlk yanıtı silmeden hedef kapsamındaki etkili değerlendirmeleri inceleme bekler durumuna getirir. |
 
-Şema 1 bir session içinde tek açık attempt taşır. Görevler arası session ilerletme ve `end_session` bu ilk dilime dahil değildir; tam oturum yönlendirmesi tamamlanmış değildir. Ancak açık attempt, `currentStep`, yanıt, güven beyanı ve maruziyetler JSON serialize/reload sonrasında replay ile aynı biçimde geri gelir. Bu, verinin gerçekten diske yazıldığı iddiası değildir.
+Şema 1 bir session içinde tek attempt taşır. Görevler arası session ilerletme bu ilk dilime dahil değildir; tam oturum yönlendirmesi tamamlanmış değildir. Ancak açık attempt, `currentStep`, yanıt, güven beyanı ve maruziyetler JSON serialize/reload sonrasında replay ile aynı biçimde geri gelir. `end_session`, yanıtı değerlendirilmiş aktif session'ı `completed` yapar. Tamamlanmış bir session'da `open_material`, `submit_answer`, `declare_confidence`, `evaluate_answer`, `advance_step`, `pause_session`, `resume_session` ve ikinci `end_session` reddedilir. Tamamlanan değerlendirilmiş yanıta itiraz edilebilir; bu durumda aynı objective kapsamındaki session durumu `review_pending` olur. Bu, verinin gerçekten diske yazıldığı iddiası değildir.
 
 ## Gözlem, beyan, değerlendirme ve maruziyet
 

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12314b">
+  <meta name="description" content="Kurgusal içerikle TUS öğrenme akışının teknik demosu">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>TUS öğrenme akışı · Teknik demo</title>
+</head>
+<body>
+  <a class="skip-link" href="#app">İçeriğe geç</a>
+  <header class="app-header">
+    <div class="brand" aria-label="TUS öğrenme akışı teknik demosu">
+      <span class="brand-mark" aria-hidden="true">T</span>
+      <span>
+        <strong>TUS öğrenme akışı</strong>
+        <small id="storage-label">Teknik demo</small>
+      </span>
+    </div>
+    <span class="offline-status" id="offline-status" role="status">Bağlantı durumu denetleniyor</span>
+  </header>
+
+  <main id="app" tabindex="-1" aria-live="polite"></main>
+  <div id="notice" class="notice" role="alert" hidden></div>
+
+  <template id="shell-template">
+    <section class="screen">
+      <div class="screen-card"></div>
+    </section>
+  </template>
+
+  <script src="../session-core.js" defer></script>
+  <script src="../session-store.js" defer></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>

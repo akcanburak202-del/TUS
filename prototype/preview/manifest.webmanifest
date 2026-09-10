@@ -1,0 +1,14 @@
+{
+  "name": "TUS Öğrenme Akışı Teknik Demo",
+  "short_name": "TUS Demo",
+  "description": "Sentetik içerikle öğrenme ve kayıt akışı teknik demosu",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f1e6",
+  "theme_color": "#12314b",
+  "lang": "tr",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

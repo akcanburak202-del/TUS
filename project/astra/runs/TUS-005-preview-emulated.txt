@@ -1,0 +1,16 @@
+✔ portable demo boots without localStorage and completes a temporary trial (138.843475ms)
+✔ emulated IDB: correct guess, supported exercise, completion and late dispute preserve separate records (155.928962ms)
+✔ emulated DOM: unknown and incorrect routes show distinct teaching messages (42.111305ms)
+✔ emulated IDB: reload resumes paused state and preserves committed first answer (40.706182ms)
+✔ emulated DOM: failed dispatch retains selection and retry does not duplicate answer (15.048919ms)
+✔ emulated DOM: rapid retry taps commit one answer without a false error (12.502164ms)
+✔ emulated DOM: evaluate failure exposes no feedback or uncommitted evaluation (39.351566ms)
+✔ emulated IDB: source and hint remain exposed after reload and mark assisted response (48.570605ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 697.513016

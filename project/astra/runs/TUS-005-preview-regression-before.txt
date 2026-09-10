@@ -1,0 +1,50 @@
+✖ portable demo boots without localStorage and completes a temporary trial (19.188087ms)
+✔ emulated IDB: correct guess, supported exercise, completion and late dispute preserve separate records (169.186282ms)
+✔ emulated DOM: unknown and incorrect routes show distinct teaching messages (51.165098ms)
+✔ emulated IDB: reload resumes paused state and preserves committed first answer (48.873999ms)
+✔ emulated DOM: failed dispatch retains selection and retry does not duplicate answer (16.447974ms)
+✖ emulated DOM: rapid retry taps commit one answer without a false error (21.32481ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 4
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 530.846654
+
+✖ failing tests:
+
+test at tests/emulated/preview.test.cjs:51:1
+✖ portable demo boots without localStorage and completes a temporary trial (19.188087ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Öğrenme akışını dene/. Input:
+
+  'Demo başlatılamadıKayıt alanı açılamadıStorage access deniedBu teknik demo, session core ve store bağımlılıkları olmadan kayıt yapıyormuş gibi davranmaz.'
+
+      at TestContext.<anonymous> (/workspace/scratch/6be1bd604873/TUS-repo/tests/emulated/preview.test.cjs:52:46)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Demo başlatılamadıKayıt alanı açılamadıStorage access deniedBu teknik demo, session core ve store bağımlılıkları olmadan kayıt yapıyormuş gibi davranmaz.',
+    expected: /Öğrenme akışını dene/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/emulated/preview.test.cjs:79:1
+✖ emulated DOM: rapid retry taps commit one answer without a false error (21.32481ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /Kayıt tamamlanamadı/. Input:
+
+  'Yanıt kaydedildiNe kadar emindin?İlk yanıtın kilitli: ArtırmalıBu beyan isteğe bağlıdır ve yanıtının doğruluğunu değiştirmez.EminimEmin değilimTahmin ettimSonucu görSeçmeden devam edebilirsin.Ara verKayıt tamamlanamadı.Seçimin korunuyor. Aynı kayıt komutunu yeniden deneyebilirsin.Kaydı yeniden dene'
+
+      at TestContext.<anonymous> (/workspace/scratch/6be1bd604873/TUS-repo/tests/emulated/preview.test.cjs:83:55)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Yanıt kaydedildiNe kadar emindin?İlk yanıtın kilitli: ArtırmalıBu beyan isteğe bağlıdır ve yanıtının doğruluğunu değiştirmez.EminimEmin değilimTahmin ettimSonucu görSeçmeden devam edebilirsin.Ara verKayıt tamamlanamadı.Seçimin korunuyor. Aynı kayıt komutunu yeniden deneyebilirsin.Kaydı yeniden dene',
+    expected: /Kayıt tamamlanamadı/,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
